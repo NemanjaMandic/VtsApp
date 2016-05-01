@@ -1,11 +1,7 @@
 <% if notice %>
    <p id="notice"><%= notice %></p>
 <% end %>
-<h2>Cart</h2>
-<ul>
-  <% @cart.line_items.each do |item| %>
-     <li><%= item.quantity %> &times; <%= item.product.title %></li>
-  <% end %>
-</ul>
+
+<%= render @cart %>
 
 <%= link_to 'Back', carts_path %>
